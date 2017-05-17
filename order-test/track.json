@@ -35,10 +35,10 @@
       "schedule": [
         {
           "operation": "query-match-all",
-          "clients": 10,
+          "clients": 1,
           "warmup-iterations": 10,
-          "iterations": 100,
-          "target-throughput": 10
+          "iterations": 10,
+          "target-throughput": 1
         }
       ]
     }
