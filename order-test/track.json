@@ -1,0 +1,46 @@
+{
+  "short-description": "Tutorial benchmark for Rally",
+  "description": "This tests querying the Order Header index",
+  "indices": [
+    {
+      "name": "hdporder",
+      "auto-managed": false,
+      "types": [
+        {
+          "name": "orderHeader",
+          "mapping": "orderHeader_map.json"
+        }
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "name": "query-match-all",
+      "operation-type": "search",
+      "body": {
+        "query": {
+          "match_all": {}
+        }
+      }
+    }
+  ],
+  "challenges": [
+    {
+      "name": "query-all",
+      "description": "Query for Order data",
+      "default": true,
+      "index-settings": {
+        "index.number_of_replicas": 0
+      },
+      "schedule": [
+        {
+          "operation": "query-match-all",
+          "clients": 10,
+          "warmup-iterations": 10,
+          "iterations": 100,
+          "target-throughput": 10
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "mappings": {
+    "orderHeader": {      
+      "properties": {
+        "Backlog": {
+          "type": "double"
+        },
+        "Booking": {
+          "type": "double"
+        },
+        "currency_code": {
+          "type": "keyword"
+        },
+        "deal_id": {
+          "type": "keyword"
+        },
+        "employee_id": {
+          "type": "keyword"
+        },
+        "end_customer": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "ERP_POS_FLAG": {
+          "type": "keyword"
+        },
+        "plan_element_descr": {
+          "type": "text",
+          "fields": {
+            "keyword": {
+              "type": "keyword"
+            }
+          }
+        },
+        "po_number": {
+          "type": "keyword"
+        },
+        "Revenue": {
+          "type": "double"
+        },
+        "so_number": {
+          "type": "long"
+        },
+        "source_transaction_date": {
+          "type": "date"
+        },
+        "srp_goal_header_id": {
+          "type": "long"
+        },
+        "srp_goal_quota_id": {
+          "type": "long"
+        },
+        "Type": {
+          "type": "keyword"
+        }
+      }
+    }
+  }
+}
