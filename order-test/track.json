@@ -37,8 +37,7 @@
           "operation": "query-match-all",
           "clients": 1,
           "warmup-iterations": 10,
-          "iterations": 10,
-          "target-throughput": 1
+          "iterations": 10
         }
       ]
     }
